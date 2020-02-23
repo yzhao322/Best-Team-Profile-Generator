@@ -31,22 +31,33 @@
     </div>
     <div class="container">
         <div class="row" style="width: 900px">
-                {{team}} 
+            {{team}}
         </div>
     </div>
     <script>
-            $(document).ready(function(){
-            var a = $('#github');
-            var githubName = a.text();
-            var url = `https://github.com/${githubName}`;
-            a.attr('href', url);
-            var mail = $('#mail');
-            var mailaddress = mail.text();
-            var Url = `mailto: ${mailaddress}`;
-            mail.attr('href', Url);
+        $(document).ready(function () {
+            let a = $('.github');
+            a.click(function (event) {
+                event.preventDefault();
+                var githubName = $(this).text();
+                var url = `https://github.com/${githubName}`;
+                a.attr('href', url);
+                window.open(url);
             })
-        </script>
-    
+
+            let mail = $('.mail');
+            mail.click(function (event) {
+                event.preventDefault();
+                var mailaddress = $(this).text();
+                var Url = `mailto: ${mailaddress}`;
+                mail.attr('href', Url);
+                window.open(Url)
+            })
+
+
+        })
+    </script>
+
 </body>
 
 </html>

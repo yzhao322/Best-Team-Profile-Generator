@@ -30,54 +30,78 @@
         </div>
     </div>
     <div class="container">
-        <div class="row" style="width: auto">
-                
+        <div class="row" style="width: 900px">
+            
     <div id="container" style="display: inline-block">
         <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" style="font-family: Bree Serif">fdsa</a>
-        </nav>
-        <div class="card" style="background-image: url(../assets/images/embossed-diamond.png)">
-            <div class="card-body">
-                <p class="card-text">Position: Engineer</p>
-                <p class="card-text">Empolyee ID: fdsa</p>
-                <p class="card-text">Email: <a href="" id="mail">fdsa</a></p>
-                <p class="card-text">Github: <a href="" id="github">fdsa</a></p>
-            </div>
-        </div>
-    </div>
-</body>
-,
-    <div id="container" style="display: inline-block">
-        <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" style="font-family: Bree Serif">fdsa</a>
+            <a class="navbar-brand" style="font-family: Bree Serif">adam</a>
         </nav>
         <div class="card" style="background-image: url(../assets/images/embossed-diamond.png)">
             <div class="card-body">
                 <p class="card-text">Position: Manager</p>
-                <p class="card-text">Empolyee ID: fdsa</p>
-                <p class="card-text">Email: <a href="" id="mail">fdsa</a></p>
-                <p class="card-text">Office: fdsa</p>
+                <p class="card-text">Empolyee ID: 124</p>
+                <p class="card-text">Email: <a href="" class="mail">fdslk@fjdksla</a></p>
+                <p class="card-text">Office: 100</p>
+            </div>
+        </div>
+    </div>
+,
+    <div id="container" style="display: inline-block">
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" style="font-family: Bree Serif">Yan</a>
+        </nav>
+        <div class="card" style="background-image: url(../assets/images/embossed-diamond.png)">
+            <div class="card-body">
+                <p class="card-text">Position: Engineer</p>
+                <p class="card-text">Empolyee ID: 102</p>
+                <p class="card-text">Email: <a href="" class="mail">fjdslk@dsfla</a></p>
+                <p class="card-text">Github: <a href="" class="github">yzhao322</a></p>
             </div>
         </div>
     </div>
 
 
- 
+,
+    <div id="container" style="display: inline-block">
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" style="font-family: Bree Serif">Kim</a>
+        </nav>
+        <div class="card" style="background-image: url(../assets/images/embossed-diamond.png)">
+            <div class="card-body">
+                <p class="card-text">Position: Intern</p>
+                <p class="card-text">Empolyee ID: 150</p>
+                <p class="card-text">Email: <a href="" class="mail">fjdsa@ngc</a></p>
+                <p class="card-text">School: UW</p>
+            </div>
+        </div>
+    </div>
+
         </div>
     </div>
     <script>
-            $(document).ready(function(){
-            var a = $('#github');
-            var githubName = a.text();
-            var url = `https://github.com/${githubName}`;
-            a.attr('href', url);
-            var mail = $('#mail');
-            var mailaddress = mail.text();
-            var Url = `mailto: ${mailaddress}`;
-            mail.attr('href', Url);
+        $(document).ready(function () {
+            let a = $('.github');
+            a.click(function (event) {
+                event.preventDefault();
+                var githubName = $(this).text();
+                var url = `https://github.com/${githubName}`;
+                a.attr('href', url);
+                window.open(url);
             })
-        </script>
-    
+
+            let mail = $('.mail');
+            mail.click(function (event) {
+                event.preventDefault();
+                var mailaddress = $(this).text();
+                var Url = `mailto: ${mailaddress}`;
+                mail.attr('href', Url);
+                window.open(Url)
+            })
+
+
+        })
+    </script>
+
 </body>
 
 </html>
