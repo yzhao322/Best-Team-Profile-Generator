@@ -6,3 +6,5 @@
 * This is a command-line application that will generate HTML page that display information about each team member .
 * The user will be asked for the each team member's information (email, id, and specific info based on their role).
 * Run cli.js to gather the information.
+* The output HTML file will look like below page.
+<img src="assets/images/demo.png" >
